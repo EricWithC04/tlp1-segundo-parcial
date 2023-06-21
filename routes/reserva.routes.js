@@ -12,6 +12,9 @@ const { getReservas, createReservas, updateReservas, deleteReservas } = require(
 
 // Formulario para crear una reserva
 
+router.get("/reserva/crear", (req, res) => {
+    res.render("/reserva/index.ejs")
+})
 // Formulario para actualizar una reserva
 
 // ==========================================
@@ -19,16 +22,17 @@ const { getReservas, createReservas, updateReservas, deleteReservas } = require(
 // ==========================================
 
 // Obtener todas las reservas
-router.get('/', getReservas);
+router.get('/api/', getReservas);
  
 // Crear una reserva
-router.post('/', createReservas);
+router.post('/api/', createReservas);
  
 // Actualizar una reserva
-router.put('/:cod_reserva', updateReservas);
+router.put('/api/:cod_reserva', updateReservas);
  
 // Eliminar una reserva de forma lógica
-router.delete('/:cod_reserva', deleteReservas);
+router.delete('/api/:cod_reserva', deleteReservas);
+
 
  
  module.exports = router;
