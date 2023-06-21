@@ -24,6 +24,7 @@ sequelize.authenticate()
     .catch((error) => console.log("Error al conectar con la base de datos!", error))
 
 // Routes
+app.use("/", require('./routes/index.routes.js'));
 app.use('/api', require('./routes/reserva.routes'));
 
 // TODO: Si la petición no coincide con ninguna de las rutas declaradas, mostrar error 404
