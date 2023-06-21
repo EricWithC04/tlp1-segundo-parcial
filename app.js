@@ -4,6 +4,7 @@ const cors = require('cors');
 const morgan = require("morgan");
 const helmet = require("helmet");
 const path = require('path');
+const { sequelize } = require("./database.js");
 require("dotenv").config();
 const port = process.env.PORT;
 const app = express();
@@ -17,6 +18,10 @@ app.use(helmet());
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+sequelize.authenticate()
+    .then(() => console.log("Conexión a la base de datos exitosa!"))
+    .catch((error) => console.log("Error al conectar con la base de datos!", error))
 
 // Routes
 app.use('/api', require('./routes/reserva.routes'));

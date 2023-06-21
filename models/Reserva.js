@@ -1,5 +1,5 @@
 // TODO: Crear modelo de datos de Reserva
-const { DataTypes, DATEONLY } = require("sequelize");
+const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
     sequelize.define('reserva', {
