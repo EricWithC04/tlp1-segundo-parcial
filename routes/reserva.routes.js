@@ -18,7 +18,9 @@ const router = require('express').Router();
 // ==========================================
 
 // Obtener todas las reservas
-router.get('/',);
+router.get('/', (req, res) => {
+    res.status(200).send("todo funciona")
+});
  
 // Crear una reserva
 router.post('/',);
