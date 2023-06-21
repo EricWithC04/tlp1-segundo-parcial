@@ -18,16 +18,16 @@ const router = require('express').Router();
 // ==========================================
 
 // Obtener todas las reservas
-router.get('/api/',);
+router.get('/',);
  
 // Crear una reserva
-router.post('/api/',);
+router.post('/',);
  
 // Actualizar una reserva
-router.put('/api/:id',);
+router.put('/:id',);
  
 // Eliminar una reserva de forma lógica
-router.delete('/api/:id',);
+router.delete('/:id',);
 
  
  module.exports = router;
